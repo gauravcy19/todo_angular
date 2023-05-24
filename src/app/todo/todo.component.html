@@ -1,0 +1,25 @@
+<h1>To-do App</h1>
+
+<div class="todo-list">
+  <!-- rest of your code -->
+</div>
+
+<div class="new-todo">
+  <!-- rest of your code -->
+</div>
+
+
+<div class="todo-list">
+    <div *ngFor="let todo of todos">
+      <input type="checkbox" [(ngModel)]="todo.completed">
+      <input type="text" [(ngModel)]="todo.title">
+      <button (click)="updateTodo(todo)">Update</button>
+      <button (click)="deleteTodo(todo.id)">Delete</button>
+    </div>
+  </div>
+  
+  <div class="new-todo">
+    <input type="text" [(ngModel)]="newTodo.title" placeholder="New todo">
+    <button (click)="addTodo()">Add</button>
+  </div>
+  
